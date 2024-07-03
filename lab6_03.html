@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="img/Pha.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style type="text/css">
+    
+        #container {
+        width:100%;
+        }
+        #box1 {
+        background:yellow; border:1px solid #000;
+        float:left; min-height:230px; margin-right:10px;width:250px;
+        }
+        #box2 {
+        background:blue; border:1px solid #000;
+        float:left; min-height:230px; width:250px;
+        }
+        #smallbox {
+        background:red; border:1px solid #000;
+        float:center; min-height:30px; width:50px;
+        }
+
+        </style>
+        
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $('#smallbox').appendTo('#box2');
+        });
+        });
+        </script>
+</head>
+<body>
+<div id="container">
+    <div id="box1">
+        Box1
+        <div id ="smallbox">
+            Inside box.
+        </div>
+    </div>
+    <div id="box2">
+        Box2
+    </div>
+</div>
+<br/>
+<button id="btn">move</button>
+</body>
+</html>    

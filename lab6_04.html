@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>test.html</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="img/Pha.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+  $("#btn1").click(function(){
+    var div = $("div");
+    div.animate({fontSize: '100px'}, "slow");
+  });
+});
+        </script>
+</head>
+<body>
+<div style="background:#227711;height:200px;width:600px;">Atikan</div>
+<button id="btn1">animate</button>
+</body>
+</html>

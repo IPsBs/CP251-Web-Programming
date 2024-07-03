@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+*
+label.description{
+    color: blue;
+}
+::placeholder{
+    color: gray;
+    font-style: italic;
+}
+body{
+    background-color:#B24DE5;
+    font-family: 'Heebo', sans-serif;
+}
+label.description{
+    color: blue;
+}
+::placeholder{
+    color: gray;
+    font-style: italic;
+}
+h1{
+    color:white;
+}
+p{
+    font-size: 25px;
+    color: white;
+}

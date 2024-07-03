@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches:400,700');
+*
+
+
+.head {
+    text-align:center;
+    font-family: Staatliches; 
+    margin: 3%;
+    font-size: 25px;
+    color: #BC4AC4;
+    width: 600px;
+    height: 80px;
+    border:5px solid #EBC349; 
+    background-color: #2C0854;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.url {
+    font-family: Staatliches; 
+    font-size: 50px;
+    margin: -350px;
+    position: relative;
+
+}
+
+.google {
+    height:500px;
+    width:1000px;
+    border:5px solid #BBBDF6;
+    position: relative;
+    left: -285px;
+    margin-top: 420px;
+}
+
+a{
+    color: #FFFFFF;
+}

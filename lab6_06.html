@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery Mobile</title>
+  <link rel="shortcut icon" type="image/png" href="img/Pha.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    ul {
+      list-style: none;
+    }
+  </style>
+  <!-- the home page: -->
+  <div data-role="page" id="home">
+    <!-- home page header: -->
+    <div data-role="header">
+      <h1>Home</h1>
+      <div data-role="navbar">
+        <ul>
+          <!-- classes "ui-btn-active" and "ui-state-persist" -->
+          <!-- make "Home" link active: -->
+          <li><a href="#home" class="ui-btn-active ui-state-persist" data-icon="home">Home</a></li>
+          <li><a href="#contact" data-icon="grid">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- home page content: -->
+    <div data-role="content">
+      <li><a href="Lab6_01.html" target="_self">Lab6_01</a></li>
+      <li><a href="Lab6_02.html" target="_self">Lab6_02</a></li>
+      <li><a href="Lab6_03.html" target="_self">Lab6_03</a></li>
+      <li><a href="Lab6_04.html" target="_self">Lab6_04</a></li>
+      <li><a href="Lab6_05.html" target="_self">Lab6_05</a></li>
+      <li><a href="Lab6_06.html">Lab6_06</a></li>
+      <p class="orientation"></p>
+    </div>
+    <!-- home page footer: -->
+    <footer>
+      <div data-role="footer">
+        <h4><a href="mailto:atikan.moopayak@g.swu.ac.th">atikan.moopayak@g.swu.ac.th</a>
+      </div>
+    </footer>
+  </div>
+  <!-- the contact page: -->
+  <div data-role="contact" id="contact">
+    <!-- contact page header: -->
+    <div data-role="header">
+      <h1>Contact</h1>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-icon="home">Home</a></li>
+          <li><a href="#contact" class="ui-btn-active ui-state-persist" data-icon="grid">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- contact page content: -->
+    <div data-role="content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quia ex alias laborum quam culpa tempora
+        suscipit delectus dolores eius vero et, officia sint eveniet molestiae, itaque deserunt beatae ratione!</p>
+      <p class="orientation"></p>
+    </div>
+    <!-- contact page footer: -->
+    <footer>
+      <div data-role="footer">
+        <h4><a href="mailto:atikan.moopayak@g.swu.ac.th">atikan.moopayak@g.swu.ac.th</a>
+      </div>
+    </footer>
+    <script>
+      //handler for orientation-change event:
+      $(window).on('orientationchange', function (event) {
+        //on orientation change, set content of div with appropriate text:
+        $('.orientation').html('You are in <em>' + event.orientation + '</em> mode.');
+      });
+      //call event handler when page first loads, to set orientation message:
+      $(window).orientationchange();
+    </script>
+    </body>
+
+</html>

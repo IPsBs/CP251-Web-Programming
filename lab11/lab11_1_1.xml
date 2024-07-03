@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE anime_catalog [
+    
+<!ELEMENT anime_catalog (anime+)>
+<!ELEMENT anime (name, country, genre, characters, year?, pic)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT pic (#PCDATA)>
+<!ELEMENT characters (character+)>
+<!ELEMENT character (#PCDATA)>
+<!ATTLIST anime type NMTOKENS #IMPLIED>
+<!ATTLIST character gender (female|male|unknown) #REQUIRED>
+]>
+<anime_catalog>
+	<anime type="Manga,Anime television series,Media franchise">
+		<name>Naruto</name>
+		<country>Japan</country>
+		<genre> Adventure , Fantasy comedy , Martial arts</genre>
+		<year>1999</year>
+		<pic>./img/naruto.jpg</pic>
+		<characters>
+			<character gender="male">Itachi Uchiha</character>
+			<character gender="male">Sasuke Uchiha</character>
+			<character gender="male">Nagato</character>
+			<character gender="male">Tobi</character>
+		</characters>
+	</anime>
+	<anime type="Manga,Anime television series,Anime film,">
+		<name>Boruto: Naruto Next Generations</name>
+		<country>Japan</country>
+		<genre>	AAdventure, fantasy</genre>
+		<year></year>
+		<pic>./img/boruto.jpg</pic>
+		<characters>
+			<character gender="male">Boruto</character>
+			<character gender="female">Himawari</character>
+			<character gender="female">Hinata</character>
+			<character gender="male">Naruto</character>
+		</characters>
+	</anime>
+	<anime type="">
+		<name>Demon Slayer: Kimetsu no Yaiba</name>
+		<country>Japan</country>
+		<genre>Adventure,Dark fantasy,Martial arts</genre>
+		<year>2020</year>
+		<pic>./img/DemonS.jpg</pic>
+		<characters>
+			<character gender="female">Nezuko</character>
+			<character gender="male">Tanjiro</character>
+			<character gender="female">Kanao</character>
+		</characters>
+	</anime>
+</anime_catalog>

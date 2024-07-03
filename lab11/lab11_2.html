@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Lab10.2 (JSON)</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+
+    table,
+    th,
+    td {
+      border: 3px solid black;
+      
+    }
+
+    th,
+    td {
+      padding: 15px;
+    }
+
+    table {
+      margin-top: 10px;      
+    }
+
+    tr:nth-child(even) {
+      background-color: #cbf319;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #b30ae6;
+    }
+
+    article {
+      padding: 50px;
+      background-color: #cabecd;
+      width: 35%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <center>
+    <div class="container" style="margin-top:100px ">
+      <article>
+        <form id="myform">
+          <p><label for="tbname">Table_name&nbsp;:&nbsp;</label><input type="text" id="tbname" value="students"></p>
+          <p><label for="limit">Limit_Table&nbsp;:&nbsp;</label><input type="number" id="limit" value="3"></p>
+          <input type="button" onclick="change()" value="Submit">
+        </form>
+      </article>
+    </div>
+  </center>
+
+
+  <center>
+    <table id="demo"></table>
+  </center>
+
+  <script>
+
+    var Table_name = "students";
+    var limit = 3;
+    main()
+
+    function change() {
+      this.Table_name = document.getElementById("tbname").value;
+      this.limit = document.getElementById("limit").value;
+      main()
+    }
+
+    function main() {
+      var std, db, xmlhttp, myStd, x, txt = "";
+      std = {
+        "table": Table_name,
+        "limit": limit
+      };
+      db = JSON.stringify(std);
+      txt = "<tr><th>id</th><th>name</th><th>lastname</th><th>Major</th><th>dob</th><th>phone</th></tr>";
+      xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          myStd = JSON.parse(this.responseText);
+          for (x in myStd) {
+            txt += "<tr><td>" + myStd[x].id + "</td><td>" + myStd[x].name + "</td><td>" + myStd[x].lastname +
+              "</td><td>" + myStd[x].major + "</td><td>" + myStd[x].dob + "</td><td>" + myStd[x].phone + "</td></tr>";
+          }
+          document.getElementById("demo").innerHTML = txt;
+        }
+      };
+      xmlhttp.open("GET", "./db_student.php?x=" + db, true);
+      xmlhttp.send();
+    }
+
+  </script>
+
+</body>
+
+</html>
